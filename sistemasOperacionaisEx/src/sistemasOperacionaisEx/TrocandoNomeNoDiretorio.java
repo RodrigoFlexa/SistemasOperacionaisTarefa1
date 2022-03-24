@@ -16,10 +16,8 @@ public class TrocandoNomeNoDiretorio {
 
 		for (File fl : folders) {
 			String novoNome = "L" + fl.getName().substring(1);
-			File novoFile = new File(fl.getParent()+"\\"+novoNome);
-			File fileTeste = new File(novoNome);
-			fl.renameTo(fileTeste);
-			
+			File novoFile = new File(fl.getParent() + "\\" + novoNome);
+			fl.renameTo(novoFile);
 		}
 		sc.close();
 	}
