@@ -12,9 +12,9 @@ public class TrocandoNomeNoDiretorio {
 		String strPath = sc.nextLine();
 
 		File path = new File(strPath);
-		File[] folders = path.listFiles(File::isDirectory);
+		File[] files = path.listFiles(File::isFile);
 
-		for (File fl : folders) {
+		for (File fl : files) {
 			String novoNome = "L" + fl.getName().substring(1);
 			File novoFile = new File(fl.getParent() + "\\" + novoNome);
 			fl.renameTo(novoFile);
